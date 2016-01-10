@@ -1,5 +1,30 @@
 This is the current, previous and future development milestones and contains the features backlog.
 
+# 2.8.0 (stable) #
+
+* flags for subsets of the manifest with --only (Issue 57)
+* cluster delete throws an error (Issue 59)
+* Support for an options key that tags on options to all nodes (Chris Yates)
+* Zero padding with {{n}} (Issue 62)
+* Printed deletion knife commands are incorrect for rackspace server delete (Issue 65)
+* bundler support (Issue 67)
+* Berkshelf 3 support (Issue 69)
+* fix Ubuntu parallel (Issue 72)
+* Sync with ChefDK dependencies (Issue 74)
+* upgrade to ffi-yajl (Issue 75)
+* Better handling of empty directories. (Issue 79)
+* --chef-client produces lower-case search query (Issue 81)
+* Rubocop cleanups (Andrew Glick)
+* Support for knife-vcair, cleanup of stale cloud providers
+
+# 2.7.0 (unreleased) #
+
+* updated Gem dependencies to match ChefDK
+* Berkshelf 3.x upgrade
+* rubocop cleanups
+* massive rspec updates
+* Chef Software copyright headers
+
 # 2.6.0 #
 
 * Linode and Digital Ocean support (Fletcher Nichol)
@@ -241,9 +266,6 @@ This is the current, previous and future development milestones and contains the
 * publish as a gem on RubyGems
 
 # BACKLOG #
-* add Tailor testing
-* extract and validate nodes
-* extract subdirectories
 * ADDITIONAL VALIDATION
  * environment-specific run_lists
  * sort roles by dependencies of other roles?
@@ -255,10 +277,6 @@ This is the current, previous and future development milestones and contains the
   * load in the librarian file
   * output the knife commands
   * validate the librarian cookbooks vs. roles, environments and run lists
-* CONVERT TO A KNIFE PLUGIN
- * knife batch create from file infrastructure.yml
- * knife batch delete from file infrastructure.json
- * knife batch rebuild from file infrastructure.yml
 * EXTRACT EXISTING INFRASTRUCTURE FROM CHEF SERVER (or just use knife download?)
  * knife batch extract to a tarball named for the organization
  * option to include credentials and knife.rb
@@ -268,7 +286,10 @@ This is the current, previous and future development milestones and contains the
  * ie. "knife cookbook upload apt\n knife cookbook upload ntp" instead of 1 liner
 * do we need to support concept of Groups from Berkshelf, to allow uploading multiple versions of cookbooks?
 * cluster support, check to see how many nodes result that match the query?
-* flags for just 1 part of the manifest (implies no validation)
- * --nodes
- * --databags
- * --environments
+## Targetted for 3.0 ##
+* CONVERT TO A KNIFE PLUGIN
+ * knife batch create from file infrastructure.yml
+ * knife batch delete from file infrastructure.json
+ * knife batch rebuild from file infrastructure.yml
+* Output as Chef Metal recipe
+* should spiceweasel talk directly to the Chef API?

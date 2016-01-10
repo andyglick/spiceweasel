@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency('mixlib-cli', '~> 1.5')
   s.add_dependency('mixlib-log', '~> 1.6')
   s.add_dependency('mixlib-shellout', '~> 1.4')
-  s.add_dependency('chef', '~> 11.16')
+  s.add_dependency('chef', '>= 11.16')
   s.add_dependency('berkshelf', '~> 3.1')
   s.add_development_dependency('rspec', '~> 3')
   s.add_development_dependency('rake', '~> 10.3')
